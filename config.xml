@@ -77,4 +77,13 @@
 
     <content src="index.html" />
     <access origin="*" subdomains="true" />
+
+    <!--Allow intents-->
+    <!--<allow-intent href="http://*/*" />-->
+    <!--<allow-intent href="https://*/*" />-->
+    <allow-intent href="tel:*" />
+    <allow-intent href="sms:*" />
+
+    <!-- Wildcards are allowed for the protocol, as a prefix to the host, or as a suffix to the path -->
+    <allow-navigation href="*://*.example.com/*" />
 </widget>

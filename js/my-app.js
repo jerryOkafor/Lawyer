@@ -13,48 +13,47 @@ var email;
 var Toast;
 
 
-////add device ready event
-//document.addEventListener('deviceready',function(e){
-//
-//    email = cordova.plugins.email;
-//    Toast = window.plugins.toast;
-//},false)
-
-var app = {
-    // Application Constructor
-    initialize: function() {
-        this.bindEvents();
-    },
-    // Bind Event Listeners
-    //
-    // Bind any events that are required on startup. Common events are:
-    // 'load', 'deviceready', 'offline', and 'online'.
-    bindEvents: function() {
-        document.addEventListener('deviceready', this.onDeviceReady, false);
-    },
-    // deviceready Event Handler
-    //
-    // The scope of 'this' is the event. In order to call the 'receivedEvent'
-    // function, we must explicitly call 'app.receivedEvent(...);'
-    onDeviceReady: function() {
-        app.receivedEvent('deviceready');
-    },
-    // Update DOM on a Received Event
-    receivedEvent: function(id) {
-        //var parentElement = document.getElementById(id);
-        //var listeningElement = parentElement.querySelector('.listening');
-        //var receivedElement = parentElement.querySelector('.received');
-        //
-        //listeningElement.setAttribute('style', 'display:none;');
-        //receivedElement.setAttribute('style', 'display:block;');
-        //
-        //console.log('Received Event: ' + id);
-        email = cordova.plugins.email;
+function onDeviceReady() {
+    //alert("Device is ready");
+    email = cordova.plugins.email;
     Toast = window.plugins.toast;
+    myApp.alert("Device is ready");
+}
+//Monitors back button press
+function onBackButtonPressed() {
+    if (cordova.platformId !== 'windows') {
+        return;
     }
-};
 
-app.initialize();
+    if (window.location.href !== "index.html") {
+        window.history.back();
+    } else {
+        throw new Error('Exit'); // This will suspend the app
+    }
+
+}
+//Monitors device on pause
+function onPause() {
+
+}
+
+//monitors on resume
+function onResume() {
+
+}
+
+//monitors onkwy mwny pressed
+function onMenuKeyDown() {
+
+}
+window.addEventListener('load', function () {
+    document.addEventListener("deviceready", onDeviceReady, false);
+    document.addEventListener("pause", onPause, false);
+    document.addEventListener("resume", onResume, false);
+    document.addEventListener("menubutton", onMenuKeyDown, false);
+    document.addEventListener("backbutton", onBackButtonPressed, false);
+});
+
 //Get the json config files
 $.getJSON("app-config.json", function (data) {
 
@@ -83,7 +82,7 @@ myApp.onPageInit('about', function (page) {
     $('#tu-link').attr('href', user.user.about.tumbleLink);
 
 
-})
+});
 
 //init the practice page
 myApp.onPageInit('practice', function (page) {
@@ -94,7 +93,7 @@ myApp.onPageInit('practice', function (page) {
     $('#practice-4').text(user.user.practice.practiceFour);
     $('#practice-5').text(user.user.practice.practiceFive);
     $('#practice-6').text(user.user.practice.practiceSix);
-})
+});
 
 // appoinment page:
 myApp.onPageInit('appointment', function (page) {
@@ -105,19 +104,19 @@ myApp.onPageInit('appointment', function (page) {
 
     //set the appoint ment text
     $("#appointment-text").text(user.user.appointment.appointmentText);
-    $$('.primary-btn').on('click',function(e){
+    $$('.primary-btn').on('click', function (e) {
         var formData = myApp.formToJSON('#appointment-form');
         alert(JSON.stringify(formData));
     });
-    email.open({
-        to: user.user.about.email,
-        //cc: ['cc1@email.de', 'cc2@email.de'],
-        //bcc: ['bcc1@email.de', 'bcc2@email.de'],
-        //subject: isHtml ? 'Body with HTML and CSS3' : 'Body with plain text',
-        subject: 'Client Appointment Book',
-        body: JSON.stringify(formData),
-        isHTML: isHtml
-    }, showToast);
+    //email.open({
+    //    to: user.user.about.email,
+    //    //cc: ['cc1@email.de', 'cc2@email.de'],
+    //    //bcc: ['bcc1@email.de', 'bcc2@email.de'],
+    //    //subject: isHtml ? 'Body with HTML and CSS3' : 'Body with plain text',
+    //    subject: 'Client Appointment Book',
+    //    body: JSON.stringify(formData),
+    //    isHTML: isHtml
+    //}, showToast);
 
 });
 // case-result
@@ -143,12 +142,12 @@ myApp.onPageInit('testimonial', function (page) {
     var testimonyList = $('#testimony-list');
     for(i=0;i<list.length;i++)
     {
-        testimonyList.append('<div class="single-testimonial swiper-slide swiper-slide-active" style="width: 1336px;">' +
+        testimonyList.append('<div class="single-testimonial swiper-slide" >' +
             '<div class="single-testimonial-image">' +
             '<img src="img/testimonial1.jpg" alt="testimonial photos"></div>' +
             '<div class="single-testimonial-text">' +
-            '<h2>'+list[i].name+'<span>'+list[i].company+'</span></h2>' +
-            '<blockquote>'+list[i].text+'</blockquote></div></div>');
+            '<h2>' + list[i].name + '<span>' + list[i].company + '</span></h2>' +
+            '<blockquote>' + list[i].text + '</blockquote></div></div>');
     }
 
     /* testimonial slider */
@@ -161,15 +160,15 @@ myApp.onPageInit('testimonial', function (page) {
 });
 
 //Conatct me Page
-myApp.onPageInit('contact-me',function(page){
+myApp.onPageInit('contact-me', function (page) {
 
-    $$('#contact-me-btn').on('click',function(e){
+    $$('#contact-me-btn').on('click', function (e) {
         var formData = myApp.formToJSON('#contact-me-form');
         alert(JSON.stringify(formData));
-        Toast.show(JSON.stringify(formData),'bottom','short');
+        Toast.show(JSON.stringify(formData), 'bottom', 'short');
 
         function showToast() {
-            Toast.show("Main Sent",'bottom','short');
+            Toast.show("Main Sent", 'bottom', 'short');
         }
 
         email.open({
@@ -185,7 +184,7 @@ myApp.onPageInit('contact-me',function(page){
 
     });
 
-})
+});
 // map
 myApp.onPageInit('map', function (page) {
     // map hide show
