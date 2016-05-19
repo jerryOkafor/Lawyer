@@ -1,68 +1,70 @@
 {
-  "user":{
-    "about":{
-      "name":"Rosmary Okafor",
-      "currentPosition":"Concel @ Ayodele, Olugbenga & Co.",
-      "objectiveP1":"Objectively evolve effective process improvements without next-generation markets.Uniquely fashion equity invested internal or organic sources vis-a-vis leveraged platforms. Uniquely synthesize interoperable supply chains and front-end markets.",
-      "objectiveP2":"Credibly deploy highly efficient value via seamless synergy. Distinctively target backward-compatible interfaces whereas.",
-      "phone":"09038768870",
-      "email":"rosemarynkeiruka@yahoo.com",
-      "facebookLink":"https://m.facebook.com/rosemary.okafor.585",
-      "twitterLink":"https://m.facebook.com/rosemary.okafor.585",
-      "linkedinLink":"https://m.facebook.com/rosemary.okafor.585",
-      "tumbleLink":"https://m.facebook.com/rosemary.okafor.585"
-
+  "user": {
+    "about": {
+      "name": "Rosmary Okafor",
+      "currentPosition": "Concel @ Ayodele, Olugbenga & Co.",
+      "objectiveP1": "Objectively evolve effective process improvements without next-generation markets.Uniquely fashion equity invested internal or organic sources vis-a-vis leveraged platforms. Uniquely synthesize interoperable supply chains and front-end markets.",
+      "objectiveP2": "Credibly deploy highly efficient value via seamless synergy. Distinctively target backward-compatible interfaces whereas. Credibly deploy highly efficient value via seamless synergy. Distinctively target backward-compatible interfaces whereas",
+      "phone": "09038768870",
+      "email": "rosemarynkeiruka@yahoo.com",
+      "facebookLink": "https://m.facebook.com/rosemary.okafor.585",
+      "twitterLink": "https://m.facebook.com/rosemary.okafor.585",
+      "linkedinLink": "https://m.facebook.com/rosemary.okafor.585",
+      "tumbleLink": "https://m.facebook.com/rosemary.okafor.585"
     },
-    "practice":{
-      "practiceText":"Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities.",
-      "practiceOne":"Family",
-      "practiceTwo":"Business",
-      "practiceThree":"Water",
-      "practiceFour":"Civil",
-      "practiceFive":"Food",
-      "practiceSix":"Cyber"
+    "practice": {
+      "practiceText": "Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities.",
+      "practiceOne": "Family",
+      "practiceTwo": "Business",
+      "practiceThree": "Water",
+      "practiceFour": "Civil",
+      "practiceFive": "Food",
+      "practiceSix": "Cyber"
     },
-    "case":{
-      "caseText":"Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities.",
-      "caseHandle":"1400",
-      "successfulCase":"95",
-      "caseDismissed":"1320",
-      "happyClients":"1170"
+    "case": {
+      "caseText": "Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities.",
+      "caseHandle": "1400",
+      "successfulCase": "95",
+      "caseDismissed": "1320",
+      "happyClients": "1170"
     },
-    "testimonial":{
-      "testimonialText":"Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities.",
-      "list":[
+    "testimonial": {
+      "testimonialText": "Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities.",
+      "list": [
         {
-          "name":"Okafor Jerry Hanks",
-          "company":"Xavitech Ltd",
-          "text":"Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities."
+          "name": "Okafor Jerry Hanks",
+          "company": "Xavitech Ltd",
+          "text": "Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities."
         },
         {
-          "name":"Ozioma Austine Esther",
-          "company":"ABC Comapany",
-          "text":"Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities."
+          "name": "Ozioma Austine Esther",
+          "company": "ABC Comapany",
+          "text": "Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities."
         },
         {
-          "name":"Fredrick Okafor",
-          "company":"XYZ Company",
-          "text":"Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities."
+          "name": "Fredrick Okafor",
+          "company": "XYZ Company",
+          "text": "Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities."
         },
         {
-          "name":"Eze Priceton Kelechi",
-          "company":"SSS Company",
-          "text":"Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities."
+          "name": "Eze Priceton Kelechi",
+          "company": "SSS Company",
+          "text": "Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities."
         },
         {
-          "name":"Ifeanyi Okafor",
-          "company":"Cool Places",
-          "text":"Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities."
+          "name": "Ifeanyi Okafor",
+          "company": "Cool Places",
+          "text": "Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities."
         },
         {
-          "name":"Okafor Chinonso",
-          "company":"London Plc",
-          "text":"Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities."
+          "name": "Okafor Chinonso",
+          "company": "London Plc",
+          "text": "Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities."
         }
       ]
+    },
+    "appointment": {
+      "appointmentText": "Professionally morph excellent opportunities before covalent content. Conveniently build orthogonal total linkage without 24/7 communities."
     }
   }
 }

@@ -303,11 +303,15 @@ iframe {
 }
 
 .about-text {
-    margin: 35px 0;
+    margin: 35px 20px;
     text-align: left;
 }
 
 .about-text p {
+    font-size: medium;
+    font-weight: 200;
+    padding: 10px;
+    text-align: justify;
 }
 
 .call-us-btn {
@@ -884,3 +888,7 @@ i.icon.icon-next {
     transition: 0.3s;
 }
 
+#appointment-text {
+    font-size: 14px;
+    font-weight: 300;
+}

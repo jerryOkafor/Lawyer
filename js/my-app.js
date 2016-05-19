@@ -4,7 +4,57 @@ var myApp = new Framework7();
 // Export selectors engine
 var $$ = Dom7;
 
+//current lawyer user
 var user;
+
+//email sender
+var email;
+//Toast
+var Toast;
+
+
+////add device ready event
+//document.addEventListener('deviceready',function(e){
+//
+//    email = cordova.plugins.email;
+//    Toast = window.plugins.toast;
+//},false)
+
+var app = {
+    // Application Constructor
+    initialize: function() {
+        this.bindEvents();
+    },
+    // Bind Event Listeners
+    //
+    // Bind any events that are required on startup. Common events are:
+    // 'load', 'deviceready', 'offline', and 'online'.
+    bindEvents: function() {
+        document.addEventListener('deviceready', this.onDeviceReady, false);
+    },
+    // deviceready Event Handler
+    //
+    // The scope of 'this' is the event. In order to call the 'receivedEvent'
+    // function, we must explicitly call 'app.receivedEvent(...);'
+    onDeviceReady: function() {
+        app.receivedEvent('deviceready');
+    },
+    // Update DOM on a Received Event
+    receivedEvent: function(id) {
+        //var parentElement = document.getElementById(id);
+        //var listeningElement = parentElement.querySelector('.listening');
+        //var receivedElement = parentElement.querySelector('.received');
+        //
+        //listeningElement.setAttribute('style', 'display:none;');
+        //receivedElement.setAttribute('style', 'display:block;');
+        //
+        //console.log('Received Event: ' + id);
+        email = cordova.plugins.email;
+    Toast = window.plugins.toast;
+    }
+};
+
+app.initialize();
 //Get the json config files
 $.getJSON("app-config.json", function (data) {
 
@@ -53,11 +103,22 @@ myApp.onPageInit('appointment', function (page) {
         dateFormat: 'DD, MM dd, yyyy'
     });
 
+    //set the appoint ment text
+    $("#appointment-text").text(user.user.appointment.appointmentText);
     $$('.primary-btn').on('click',function(e){
         var formData = myApp.formToJSON('#appointment-form');
         alert(JSON.stringify(formData));
-
     });
+    email.open({
+        to: user.user.about.email,
+        //cc: ['cc1@email.de', 'cc2@email.de'],
+        //bcc: ['bcc1@email.de', 'bcc2@email.de'],
+        //subject: isHtml ? 'Body with HTML and CSS3' : 'Body with plain text',
+        subject: 'Client Appointment Book',
+        body: JSON.stringify(formData),
+        isHTML: isHtml
+    }, showToast);
+
 });
 // case-result
 myApp.onPageInit('caseresult', function (page) {
@@ -105,6 +166,22 @@ myApp.onPageInit('contact-me',function(page){
     $$('#contact-me-btn').on('click',function(e){
         var formData = myApp.formToJSON('#contact-me-form');
         alert(JSON.stringify(formData));
+        Toast.show(JSON.stringify(formData),'bottom','short');
+
+        function showToast() {
+            Toast.show("Main Sent",'bottom','short');
+        }
+
+        email.open({
+            to: user.user.about.email,
+            //cc: ['cc1@email.de', 'cc2@email.de'],
+            //bcc: ['bcc1@email.de', 'bcc2@email.de'],
+            //subject: isHtml ? 'Body with HTML and CSS3' : 'Body with plain text',
+            subject: 'Client Contact Mail',
+            body: JSON.stringify(formData),
+            //isHTML: isHtml
+            isHTML: false
+        }, showToast)
 
     });
 
