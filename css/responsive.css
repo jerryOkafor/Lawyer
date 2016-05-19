@@ -1,0 +1,78 @@
+/* Normal desktop :1920px. */
+@media (min-width: 1367px) and (max-width: 1920px) {
+
+}
+
+/* Normal desktop :1366px. */
+@media (min-width: 1200px) and (max-width: 1366px) {
+.mainmenu nav ul li a {
+  line-height: 91.5px;
+}
+}
+
+/* Normal desktop :1170px. */
+@media (min-width: 1170px) and (max-width: 1199px) {
+
+}
+
+/* Normal desktop :992px. */
+@media (min-width: 992px) and (max-width: 1169px) {
+
+}
+ 
+/* Tablet desktop :768px. */
+@media (min-width: 768px) and (max-width: 991px) {
+.mainmenu nav ul li {
+  width: 49.85%;
+}
+.google-map iframe {
+
+}
+}  
+ 
+/* small mobile :320px. */
+@media (min-width: 329px) and (max-width:479px) {
+.mainmenu nav ul li {
+  width: 49.7%;
+}
+.contact-me-form{
+	width: 220px;
+}
+.single-testimonial-text blockquote{
+	padding:12px 0;
+}
+}
+/* small mobile */
+@media (min-width: 320px) and (max-width:328px) {
+.mainmenu nav ul li {
+  width: 49.65%;
+}
+.contact-me-form{
+	width: 220px;
+}
+.single-testimonial-text blockquote{
+	padding:12px 0;
+}
+}
+
+/* large mobie :480px. */
+
+@media (min-width: 480px) and (max-width:767px) {
+.mainmenu nav ul li {
+  width: 49.75%;
+}
+.google-map iframe {
+
+}
+.contact-me-form{
+	width: 260px;
+}
+
+
+}
+
+
+/* Tablet desktop :768px. */
+@media (min-width: 768px) {
+
+}

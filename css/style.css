@@ -1,0 +1,886 @@
+/*--------------------------------------------------------
+    Template Name: LAWYER HTML Mobile Template
+    Template URI: http://bootexperts.com
+    Description: This is Mobile Template
+    Author: BootExperts
+    Author URI: http://bootexperts.com
+    Version: 1.0
+-----------------------------------------------------------
+    CSS INDEX
+    ===================
+    1. Theme Default CSS (body, link color, section etc)
+	2. home page
+
+	
+-----------------------------------------------------------------------------------*/
+/*-----------------------
+1. Theme default CSS 
+-------------------------*/
+html, body {
+    height: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 21px;
+    color: #555555;
+}
+
+a:focus {
+    outline: 0px solid;
+    text-decoration: none;
+    opacity: 1 !important;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin: 0 0 15px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    color: #8a6c4e;
+    font-size: 18px;
+    line-height: 23px;
+}
+
+strong {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+
+a, button {
+    transition: all 0.3s ease 0s;
+    text-decoration: none;
+    color: #fff;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    outline: 0 none;
+    color: #8a6c4e;
+}
+
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0
+}
+
+input[type=text]:focus, input[type=email]:focus, input[type=number]:focus, input[type=password]:focus, textarea:focus {
+    border: 0px solid #8a6c4e;
+}
+
+.left .back i {
+    font-size: 25px;
+    color: #8a6c4e;
+    font-weight: bold;
+}
+
+iframe {
+    border: 0px solid #fff !important;
+}
+
+/*-----------------------
+2. home page
+-------------------------*/
+.law-navbar {
+    background: #8a6c4e;
+    height: 58px;
+}
+
+.back-home {
+    height: 24px;
+    left: 15px;
+    position: relative;
+    top: 16.5px;
+    width: 24px;
+}
+
+.center-logo {
+    display: inline-block;
+    left: 50%;
+    margin-left: -62px;
+    position: relative;
+    right: 0;
+    text-align: center;
+    top: -6px;
+}
+
+.page-content {
+    padding-top: 0px !important;
+}
+
+.page {
+    padding-top: 0px !important;
+}
+
+.page.home {
+    padding-top: 0 !important;
+}
+
+.home-navbar {
+
+}
+
+.home-page-content {
+    background: rgba(0, 0, 0, 0) url("../img/home_bg.jpg") no-repeat scroll center center / cover;
+    padding: 0 !important;
+}
+
+.man-bg {
+    background: rgba(0, 0, 0, 0) url("../img/home-bg.png") no-repeat scroll right bottom;
+    height: 100%;
+    width: 100%;
+}
+
+.navbar::after {
+    height: 0px !important;
+}
+
+.custom-page {
+    display: block;
+    position: relative;
+    height: 100%;
+    bottom: 0;
+}
+
+.main-content-area {
+    height: 100%;
+    background: #fff none repeat scroll 0 0;
+
+}
+
+.home-page {
+}
+
+.home-page-inner {
+}
+
+.logo {
+    padding-left: 30px;
+    padding-top: 56px;
+}
+
+.logo a {
+    display: inline-block;
+}
+
+.logo a img {
+}
+
+.main-menu-area {
+}
+
+.mainmenu {
+    padding-top: 56px;
+}
+
+.mainmenu nav {
+}
+
+.mainmenu nav ul {
+    overflow: hidden;
+}
+
+.mainmenu nav ul li {
+    border-top: 2px solid #8B6C4F;
+    float: left;
+    width: 49.9%;
+}
+
+.mainmenu nav ul li img {
+    display: inline-block;
+    margin-right: 13px;
+    position: relative;
+    top: 3px !important;
+}
+
+.mainmenu nav ul li a {
+    background: rgba(140, 98, 57, 0.75) none repeat scroll 0 0;
+    display: block;
+    font-size: 16px;
+    line-height: 84px;
+    padding-left: 15px;
+    text-transform: uppercase;
+}
+
+.mainmenu nav ul li a:active {
+    color: #fff;
+}
+
+.mainmenu nav ul li:nth-child(2n+2) {
+    border-left: 2px solid #8B6C4F;
+}
+
+.mainmenu nav ul li:nth-child(1) {
+    border-top: 0px solid #8B6C4F;
+}
+
+.mainmenu nav ul li:nth-child(2) {
+    border-top: 0px solid #8B6C4F;
+}
+
+/*=================
+ Abouut me page
+=============*/
+.welcome-section {
+    background: rgba(0, 0, 0, 0) url("../img/welcome_bg.jpg") no-repeat scroll center center / cover;
+    position: relative;
+    text-align: center;
+}
+
+.welcome-section::before {
+    background: rgba(0, 0, 0, 0.75) none repeat scroll 0 0;
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.welcome-section h2 {
+    color: #fff;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 0;
+    padding: 80px 0;
+    position: relative;
+}
+
+.welcome-section h2 strong {
+    display: block;
+    font-weight: 700;
+}
+
+.about-me-content {
+    text-align: center;
+}
+
+.about-me-content h2 {
+    text-transform: uppercase;
+}
+
+.about-me-content h2 strong {
+}
+
+.about-image {
+    background: #f5f5f5 none repeat scroll 0 0;
+    display: inline-block;
+    line-height: 0;
+    overflow: hidden;
+    padding: 10px;
+    border-radius: 2%;
+    text-align: center;
+}
+
+.about-image img {
+    border-radius: 2%;
+    width: 196px;
+    height: 194px;
+}
+
+.about-image h2 {
+    font-size: 16px;
+    font-weight: 800;
+    text-align: center;
+    margin: 10px 0 5px;
+}
+
+.about-image p {
+    line-height: 18px;
+    text-align: center;
+    margin-bottom: 6px;
+}
+
+.about-text {
+    margin: 35px 0;
+    text-align: left;
+}
+
+.about-text p {
+}
+
+.call-us-btn {
+    padding: 0 20px;
+}
+
+.call-us-btn a {
+}
+
+.primary-btn {
+    background: #8a6c4e none repeat scroll 0 0;
+    border: 1px solid #8a6c4e;
+    display: block;
+    font-size: 20px;
+    padding: 9px 0;
+}
+
+.primary-btn:focus {
+    background: transparent none repeat scroll 0 0;
+    color: #8a6c4e;
+}
+
+.social-area {
+    background: #8a6c4e none repeat scroll 0 0 !important;
+    overflow: hidden;
+}
+
+.social-area ul {
+    overflow: hidden;
+}
+
+.social-area ul li {
+    float: left;
+    width: 25%;
+}
+
+.social-area ul li a {
+    color: #fff;
+    display: block;
+    font-size: 40px;
+    line-height: 90px;
+    text-align: center;
+}
+
+.social-area ul li a i {
+}
+
+.social-area ul li a:focus {
+    background: #fff !important;
+}
+
+.social-area ul li a.facebook {
+    background: #3B5998;
+}
+
+.social-area ul li a.facebook:focus {
+    color: #3B5998;
+}
+
+.social-area ul li a.twitter {
+    background: #4099FF;
+}
+
+.social-area ul li a.twitter:focus {
+    color: #4099FF;
+}
+
+.social-area ul li a.linkedin {
+    background: #0077B5;
+}
+
+.social-area ul li a.linkedin:focus {
+    color: #0077B5;
+}
+
+.social-area ul li a.tumblr {
+    background: #36465D;
+}
+
+.social-area ul li a.tumblr:focus {
+    color: #36465D;
+}
+
+.practice-area {
+}
+
+.practice-text, .case-result-text, .testimonial-text, .contact-me-text {
+    text-align: center;
+}
+
+.practice-text h2, .case-result-text h2, .testimonial-text h2, .contact-me-text h2 {
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.practice-text h2 strong {
+}
+
+.practice-text p, .case-result-text p {
+    margin-bottom: 5px;
+}
+
+.practice-item {
+}
+
+.single-law {
+    border: 2px solid #dfdfdf;
+    margin-top: 20px;
+    padding: 24px 0;
+}
+
+.single-law-image {
+    border: 2px solid #8a6c4e;
+    border-radius: 100%;
+    height: 57px;
+    line-height: 68px;
+    margin: 0 auto 15px;
+    text-align: center;
+    width: 57px;
+}
+
+.single-law-image img {
+}
+
+.single-law-title {
+    text-align: center;
+}
+
+.single-law-title h2 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+    color: #555;
+}
+
+.single-law-title h2 strong {
+    font-weight: 600;
+}
+
+.copyright {
+    background: #8a6c4e none repeat scroll 0 0;
+    height: 60px;
+}
+
+.copyright p {
+    color: #fff;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 50px;
+    margin: 0;
+    text-align: center;
+}
+
+.copyright p span {
+    text-transform: uppercase;
+}
+
+.copyright p span strong {
+    font-weight: 500;
+}
+
+.copyright i {
+    font-size: 10px;
+}
+
+.case-result-area {
+    background: #fff none repeat scroll 0 0;
+    padding: 30px 0 0;
+
+}
+
+.case-result-text {
+    padding-right: 10px;
+    padding-right: 10px;
+}
+
+.case-result-text h2 {
+}
+
+.case-result-text h2 strong {
+}
+
+.case-result-text p {
+}
+
+.case-result {
+    text-align: center;
+}
+
+.single-case-result {
+    padding: 20px 0;
+}
+
+.single-case-result-image {
+    line-height: 0;
+    margin-bottom: 10px;
+}
+
+.single-case-result-image img {
+}
+
+.single-case-result-title {
+}
+
+.single-case-result-title h2 {
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+
+.single-case-result-title h1 {
+    color: #555;
+    font-weight: 700;
+    font-size: 26px;
+}
+
+.single-case-result-title h2 strong {
+}
+
+.case-handel {
+}
+
+.success-case {
+    background: #f5f5f5 none repeat scroll 0 0;
+}
+
+.case-dismiss {
+}
+
+.happy-client {
+    background: #f5f5f5 none repeat scroll 0 0;
+}
+
+/*--------------
+4. testimonial
+----------------*/
+.testimonial-area {
+}
+
+.testimonial-text {
+    margin-bottom: 25px;
+}
+
+.testimonial-text h2 {
+}
+
+.testimonial-text h2 strong {
+}
+
+.testimonial-text p, .contact-me-text p {
+    margin-bottom: 0;
+    line-height: 21px;
+}
+
+.testimonial-item {
+    line-height: 0;
+}
+
+.single-testimonial {
+}
+
+.single-testimonial-image {
+    border: 3px solid #8a6c4e;
+    border-radius: 100%;
+    display: block;
+    height: 80px;
+    line-height: 0;
+    margin: 0 auto 20px;
+    overflow: hidden;
+    width: 80px;
+}
+
+.single-testimonial-image img {
+}
+
+.single-testimonial-text {
+}
+
+.single-testimonial-text h2 {
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.single-testimonial-text h2 span {
+    color: #444;
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.single-testimonial-text blockquote {
+    color: #444444;
+    font-size: 12px;
+    line-height: 21px;
+    margin: 0;
+    padding: 12px 15px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.single-testimonial-text blockquote::before {
+    background: rgba(0, 0, 0, 0) url("../img/quote_left.png") no-repeat scroll 0 0;
+    content: "";
+    display: inline-block;
+    height: 14px;
+    left: 0;
+    margin-right: 11px;
+    position: relative;
+    top: -7px;
+    width: 20px;
+}
+
+.single-testimonial-text blockquote::after {
+    background: rgba(0, 0, 0, 0) url("../img/quote_right.png") no-repeat scroll 0 0;
+    bottom: -13px;
+    content: "";
+    display: inline-block;
+    height: 14px;
+    margin-left: 11px;
+    position: relative;
+    right: 0;
+    width: 20px;
+}
+
+.testimonial-pagination {
+    line-height: 21px;
+    margin-top: 30px;
+    position: relative;
+}
+
+span.swiper-pagination-bullet {
+    background: #8a6c4e none repeat scroll 0 0;
+    border: 5px solid #fff !important;
+    margin: 0 1px !important;
+    opacity: 1;
+    width: 10px;
+    height: 10px;
+}
+
+span.swiper-pagination-bullet-active {
+    border: 5px solid #d5c2af !important;
+}
+
+/*--------------
+4. contact me
+----------------*/
+.contact-me-page.custom-page {
+    background: rgba(0, 0, 0, 0) url("../img/contact-me-bg.jpg") no-repeat scroll center center / cover;
+    height: 100%;
+    position: relative;
+    padding-top: 30px;
+}
+
+.contact-me-page.custom-page .main-content-area {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-me-text p {
+    color: #ffffff;
+    font-weight: 400;
+}
+
+.contact-me-page.custom-page:before {
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.contact-me-form {
+    margin: 0 auto;
+    padding: 50px 0 40px;
+    width: 420px;
+}
+
+.contact-me-form input, .contact-me-form textarea{
+    color: #ffffff;
+    font-weight: 200;
+    font-size: 13px;
+}
+.contact-me-form textarea{
+    height: auto;
+}
+.transparent-group {
+    background: transparent;
+}
+
+.input-group {
+    margin-bottom: 40px;
+}
+
+.input-box {
+    border: none;
+    border-bottom: 1px solid #c6c6c6;
+    min-height: 30px;
+    padding: 0 0 0 30px;
+    width: 100%;
+    box-sizing: border-box;
+
+}
+
+.name-bg {
+    background: rgba(0, 0, 0, 0) url("../img/about_me.png") no-repeat scroll left center !important;
+}
+
+.email-bg {
+    background: rgba(0, 0, 0, 0) url("../img/contact.png") no-repeat scroll left center;
+}
+
+.massage-bg {
+    background: rgba(0, 0, 0, 0) url("../img/callme.png") no-repeat scroll left top;
+}
+
+.phone-bg {
+    background: rgba(0, 0, 0, 0) url("../img/callme.png") no-repeat scroll left center;
+}
+
+.date-bg {
+    background: rgba(0, 0, 0, 0) url("../img/date.png") no-repeat scroll left center;
+}
+
+.input-box:focus {
+    border-bottom: 1px solid #8A6C4E !important;
+}
+
+.textarea {
+    height: 60px !important;
+}
+
+.submit-group {
+}
+
+.submit-group button {
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+/*--------------
+4. appoinment
+----------------*/
+.appoinment-page.custom-page {
+    background: rgba(0, 0, 0, 0) url("../img/appoinment.jpg") no-repeat scroll center center / cover;
+    height: 100%;
+    position: relative;
+    padding-top: 30px;
+}
+
+.appoinment-page.custom-page .main-content-area {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    position: relative;
+    z-index: 2;
+}
+
+.appoinment-page.custom-page .contact-me-text p {
+    color: #eeeeee;
+}
+
+.appoinment-page.custom-page:before {
+    background: #000 none repeat scroll 0 0;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.appoinment-page.custom-page .contact-me-form .input-group .input-box {
+    color: #fff;
+}
+
+.appoinment-page.custom-page .contact-me-form .submit-group .primary-btn:focus {
+    border: 1px solid #fff;
+    color: #fff;
+}
+
+.appoinment-page.custom-page .contact-me-form {
+    padding: 50px 0 58px;
+}
+
+.picker-calendar-day.picker-calendar-day-selected span {
+    background: #8a6c4e;
+    color: #fff;
+}
+
+i.icon.icon-prev {
+    position: relative;
+    background-image: url('../img/prev.png');
+}
+
+i.icon.icon-next {
+    position: relative;
+    background-image: url('../img/next.png');
+}
+
+/*--------------
+4. map 
+----------------*/
+.map-custom-page {
+    height: 89% !important;
+}
+
+.google-map {
+    position: relative;
+    height: 101% !important;
+    overflow: hidden;
+    width: 100%;
+}
+
+.google-map iframe {
+    height: 145% !important;
+    margin-top: -130px;
+    width: 100% !important;
+}
+
+.map-overlay {
+    background: rgba(0, 0, 0, 0.75) none repeat scroll 0 0;
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    transition: 0.3s;
+}
+
+.toggle-btn {
+    background: #8a6c4e;
+    border: medium none;
+    border-radius: 100%;
+    bottom: 10px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    font-size: 14px;
+    line-height: 60.5px;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.3s;
+    min-height: 65px;
+    min-width: 65px;
+    box-shadow: 0 1px 7px 0 #8a6c4e;
+}
+
+.toggle-btn:before {
+    content: "show";
+    transition: 0.3s;
+}
+
+.toggle-btn.on:before {
+    content: "hide";
+    transition: 0.3s;
+}
+
