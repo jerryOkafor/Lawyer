@@ -7,6 +7,8 @@ var $$ = Dom7;
 //current lawyer user
 var user;
 
+//var curretnPage
+ var currentPage;
 //email sender
 var email;
 //Toast
@@ -14,44 +16,64 @@ var Toast;
 
 
 function onDeviceReady() {
-    //alert("Device is ready");
-    //email = cordova.plugins.email;
-    //Toast = window.plugins.toast;
+    email = cordova.plugins.email;
+    Toast = window.plugins.toast;
     myApp.alert("Device is ready");
 }
 //Monitors back button press
 function onBackButtonPressed() {
-    if (cordova.platformId !== 'windows') {
-        return;
-    }
 
-    if (window.location.href !== "index.html") {
-        window.history.back();
-    } else {
+    //if (cordova.platformId !== 'windows') {
+    //    return;
+    //}
+
+    myApp.alert("BAck Button Pressed")
+    if (currentPage.name != "" )
+    {
+
+        myApp.mainView.back();
+
+    }else {
         throw new Error('Exit'); // This will suspend the app
     }
+
 
 }
 //Monitors device on pause
 function onPause() {
+    myApp.alert("Device OnPause");
 
 }
 
 //monitors on resume
 function onResume() {
+    myApp.alert("Device onResume");
 
 }
 
 //monitors onkwy mwny pressed
 function onMenuKeyDown() {
+    myApp.alert("Device onMenuKeyDown");
 
 }
+
+//Monitors device online
+function online() {
+    myApp.alert("Device is Online");
+}
+//monitors device offline
+function offline() {
+    myApp.alert("Device is ofline");
+}
 window.addEventListener('load', function () {
+    myApp.alert("Window Loaded");
     document.addEventListener("deviceready", onDeviceReady, false);
     document.addEventListener("pause", onPause, false);
     document.addEventListener("resume", onResume, false);
     document.addEventListener("menubutton", onMenuKeyDown, false);
     document.addEventListener("backbutton", onBackButtonPressed, false);
+    document.addEventListener("online", online, false);
+    document.addEventListener("offline", offline, false);
 });
 
 //Get the json config files
@@ -69,8 +91,15 @@ var mainView = myApp.addView('.view-main', {
     dynamicNavbar: true
 });
 
+//init the index page
+myApp.onPageInit('index',function(page){
+   currentPage = page;
+});
+
 //init the abour me page
 myApp.onPageInit('about', function (page) {
+    currentPage = page;
+
     $('#name').text(user.user.about.name);
     $('#current-position').text(user.user.about.currentPosition);
     $('#objective-p1').text(user.user.about.objectiveP1);
@@ -86,6 +115,8 @@ myApp.onPageInit('about', function (page) {
 
 //init the practice page
 myApp.onPageInit('practice', function (page) {
+    currentPage = page;
+
     $('#practice-text').text(user.user.practice.practiceText);
     $('#practice-1').text(user.user.practice.practiceOne);
     $('#practice-2').text(user.user.practice.practiceTwo);
@@ -97,6 +128,8 @@ myApp.onPageInit('practice', function (page) {
 
 // appoinment page:
 myApp.onPageInit('appointment', function (page) {
+    currentPage = page;
+
     var calendarDateFormat = myApp.calendar({
         input: '#date-piker',
         dateFormat: 'DD, MM dd, yyyy'
@@ -121,6 +154,8 @@ myApp.onPageInit('appointment', function (page) {
 });
 // case-result
 myApp.onPageInit('caseresult', function (page) {
+    currentPage = page;
+
     $('#case-text').text(user.user.case.caseText);
     $('#happy-clients').text(user.user.case.happyClients);
     $('#case-handle').text(user.user.case.caseHandle);
@@ -137,6 +172,8 @@ myApp.onPageInit('caseresult', function (page) {
 });
 // testimonial
 myApp.onPageInit('testimonial', function (page) {
+    currentPage = page;
+
     var list = user.user.testimonial.list;
     $('#testimonial-text').text(user.user.testimonial.testimonialText);
 
@@ -170,6 +207,7 @@ myApp.onPageInit('testimonial', function (page) {
 
 //Conatct me Page
 myApp.onPageInit('contact-me', function (page) {
+    currentPage = page;
 
     $$('#contact-me-btn').on('click', function (e) {
         var formData = myApp.formToJSON('#contact-me-form');
@@ -196,6 +234,7 @@ myApp.onPageInit('contact-me', function (page) {
 });
 // map
 myApp.onPageInit('map', function (page) {
+    currentPage = page;
     // map hide show
     $(".toggle-btn").click(function () {
         $(".map-overlay").toggle();
@@ -203,4 +242,4 @@ myApp.onPageInit('map', function (page) {
     });
 
 
-});   
+});

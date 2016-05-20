@@ -29,14 +29,19 @@
     <preference name="orientation" value="portrait" />
     <!-- all: default means both landscape and portrait are enabled -->
 
-    <plugin name="cordova-plugin-email-composer" spec="0.8.3" />
-    <plugin name="nl.x-services.plugins.toast" source="pgb" spec="2.0.2" />
-    <plugin name="org.apache.cordova.contacts" source="pgb" spec="0.2.16" />
-    <plugin name="org.apache.cordova.device" source="pgb" spec="0.3.0" />
-    <plugin name="org.apache.cordova.dialogs" source="pgb" spec="0.3.0" />
-    <plugin name="org.apache.cordova.inappbrowser" source="pgb" spec="0.6.0" />
-    <plugin name="org.apache.cordova.splashscreen" source="pgb" spec="1.0.0" />
-    <plugin name="org.apache.cordova.vibration" source="pgb" spec="0.3.13" />
+    <gap:plugin name="org.apache.cordova.device" />
+    <gap:plugin name="org.apache.cordova.camera" />
+    <gap:plugin name="org.apache.cordova.media-capture" />
+    <gap:plugin name="org.apache.cordova.file" />
+    <gap:plugin name="org.apache.cordova.file-transfer" />
+    <gap:plugin name="org.apache.cordova.splashscreen" />
+    <gap:plugin name="org.apache.cordova.contacts" />
+    <gap:plugin name="org.apache.cordova.geolocation" />
+    <gap:plugin name="org.apache.cordova.inappbrowser" />
+    <gap:plugin name="org.apache.cordova.dialogs" />
+    <gap:plugin name="org.apache.cordova.vibration" />
+    <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="com.simplec.plugins.localnotification" />
 
 
     <!--Email Plugin-->
@@ -99,4 +104,9 @@
 
     <!-- Wildcards are allowed for the protocol, as a prefix to the host, or as a suffix to the path -->
     <allow-navigation href="*://*.example.com/*" />
+
+    <!--<preference name="WebViewBounce" value="true" />-->
+    <preference name="Fullscreen" value="true" />
+    <preference name="AutoHideSplashScreen" value="false"/>
+    <preference name="SplashScreenDelay" value="5000"/>
 </widget>

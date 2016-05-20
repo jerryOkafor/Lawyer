@@ -155,6 +155,10 @@ iframe {
     height: 100%;
     bottom: 0;
 }
+.appoinment-custom-page
+{
+
+}
 
 .testimonial-custom-page {
     background: #fff none repeat scroll 0 0;
@@ -718,6 +722,7 @@ span.swiper-pagination-bullet-active {
 }
 
 .contact-me-page.custom-page .main-content-area {
+    display: block;
     background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
     height: 100%;
     position: relative;
@@ -743,9 +748,15 @@ span.swiper-pagination-bullet-active {
     z-index: 1;
 }
 
+.contact-me-page.custom-page.contact-me-area .contact-me-form{
+    display: block;
+    padding: 50px 0 58px;
+}
+
 .contact-me-form {
+    display: block;
     margin: 0 auto;
-    padding: 50px 0 40px;
+    padding: 50px 0 58px;
     width: 420px;
 }
 
@@ -837,7 +848,7 @@ span.swiper-pagination-bullet-active {
     color: #eeeeee;
 }
 
-.appoinment-page.custom-page:before {
+.appoinment-page .custom-page:before {
     background: #000 none repeat scroll 0 0;
     content: "";
     display: block;
@@ -860,6 +871,7 @@ span.swiper-pagination-bullet-active {
 }
 
 .appoinment-page.custom-page .contact-me-form {
+    display: block;
     padding: 50px 0 58px;
 }
 
