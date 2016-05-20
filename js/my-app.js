@@ -15,9 +15,26 @@ var email;
 var Toast;
 
 
+// Show/hide preloader for remote ajax loaded pages
+// Probably should be removed on a production/local app
+$$(document).on('ajaxStart', function (e) {
+    if (e.detail.xhr.requestUrl.indexOf('autocomplete-languages.json') >= 0) {
+        // Don't show preloader for autocomplete demo requests
+        return;
+    }
+    myApp.showIndicator();
+});
+$$(document).on('ajaxComplete', function (e) {
+    if (e.detail.xhr.requestUrl.indexOf('autocomplete-languages.json') >= 0) {
+        // Don't show preloader for autocomplete demo requests
+        return;
+    }
+    myApp.hideIndicator();
+});
+
 function onDeviceReady() {
-    email = cordova.plugins.email;
-    Toast = window.plugins.toast;
+    //email = cordova.plugins.email;
+    //Toast = window.plugins.toast;
     myApp.alert("Device is ready");
 }
 //Monitors back button press
@@ -27,7 +44,7 @@ function onBackButtonPressed() {
     //    return;
     //}
 
-    myApp.alert("BAck Button Pressed")
+    myApp.alert("BAck Button Pressed");
     if (currentPage.name != "" )
     {
 
