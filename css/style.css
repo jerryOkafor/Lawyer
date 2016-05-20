@@ -148,23 +148,30 @@ iframe {
 .navbar::after {
     height: 0px !important;
 }
+
 .custom-page {
     display: table;
     width: 100%;
     height: 100%;
     bottom: 0;
 }
-.testimonial-custom-page {}
+
+.testimonial-custom-page {
+    background: #fff none repeat scroll 0 0;
+}
+
 .main-content-area {
     display: table-row;
-    width:100%;
+    width: 100%;
     height: 100%;
     vertical-align: bottom;
     background: #fff none repeat scroll 0 0;
 
 }
 
-.testimonial-main-content-area {}
+.testimonial-main-content-area {
+    background: #fff none repeat scroll 0 0;
+}
 
 .home-page {
 }
@@ -270,9 +277,15 @@ iframe {
 }
 
 .about-me-content {
-    display: block;
-    margin-top: 20px;
+    display: table-row;
+    padding-top: 50px;
+    width: 100%;
+    height: 100%;
     text-align: center;
+}
+
+.about-me {
+    padding: 20px 0 0 0;
 }
 
 .about-me-content h2 {
@@ -324,7 +337,7 @@ iframe {
 }
 
 .call-us-btn {
-    padding: 0 20px;
+    padding: 30px 20px;
 }
 
 .call-us-btn a {
@@ -335,7 +348,7 @@ iframe {
     border: 1px solid #8a6c4e;
     display: block;
     font-size: 20px;
-    padding: 9px 0;
+    padding: 10px 0;
 }
 
 .primary-btn:focus {
@@ -345,7 +358,6 @@ iframe {
 
 .social-area {
     display: block;
-    margin-top: 30px;
     background: #8a6c4e none repeat scroll 0 0 !important;
     overflow: hidden;
 }
@@ -465,10 +477,11 @@ iframe {
 
 .copyright {
     display: table-row;
-     background: #8a6c4e none repeat scroll 0 0;
-     height: 60px;
-     vertical-align: bottom;
- }
+    background: #8a6c4e none repeat scroll 0 0;
+    height: 60px;
+    vertical-align: bottom;
+}
+
 .testimonial-copyright {
     display: block;
     width: 100%;
@@ -477,7 +490,7 @@ iframe {
     height: 60px;
 }
 
-.copyright p,.testimonial-copyright p {
+.copyright p, .testimonial-copyright p {
     color: #fff;
     font-size: 13px;
     font-weight: 300;
@@ -486,7 +499,7 @@ iframe {
     text-align: center;
 }
 
-.copyright p span,.testimonial-copyright p span {
+.copyright p span, .testimonial-copyright p span {
     text-transform: uppercase;
 }
 
@@ -573,14 +586,12 @@ iframe {
     text-align: center;
 
 }
-.swiper-wrapper{
-}
 
 .testimonial-text {
     display: block;
     text-align: center;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    padding-bottom: 40px;
+    padding-top: 40px;
 }
 
 .testimonial-text h2 {
@@ -595,6 +606,7 @@ iframe {
 }
 
 .testimonial-item {
+    padding-top: 40px;
 
 }
 
@@ -616,6 +628,8 @@ iframe {
 }
 
 .single-testimonial-text {
+    text-align: justify;
+    padding: 20px 30px 20px 30px;
 }
 
 .single-testimonial-text h2 {
@@ -635,10 +649,10 @@ iframe {
 
 .single-testimonial-text blockquote {
     color: #444444;
-    font-size: 12px;
-    line-height: 21px;
+    font-size: 13px;
+    line-height: 20px;
     margin: 0;
-    padding: 12px 15px;
+    padding: 20px 10px 0 10px;
     position: relative;
     text-align: center;
     text-transform: uppercase;
@@ -671,6 +685,7 @@ iframe {
 .testimonial-pagination {
     line-height: 21px;
     margin-top: 30px;
+    margin-bottom: 0;
     position: relative;
 }
 
@@ -729,14 +744,16 @@ span.swiper-pagination-bullet-active {
     width: 420px;
 }
 
-.contact-me-form input, .contact-me-form textarea{
+.contact-me-form input, .contact-me-form textarea {
     color: #ffffff;
     font-weight: 200;
     font-size: 13px;
 }
-.contact-me-form textarea{
+
+.contact-me-form textarea {
     height: auto;
 }
+
 .transparent-group {
     background: transparent;
 }
@@ -923,6 +940,3 @@ i.icon.icon-next {
     font-weight: 300;
 }
 
-#testimony-list {
-    display: inline-table;
-}

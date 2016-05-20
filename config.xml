@@ -12,19 +12,19 @@
 
     <preference name="phonegap-version" value="cli-5.2.0" />
     <feature name="http://api.phonegap.com/1.0/device" /><!-- for iOS -->
-    <feature name="Toast">
-        <param name="ios-package" value="Toast" />
-    </feature>
+    <!--<feature name="Toast">-->
+        <!--<param name="ios-package" value="Toast" />-->
+    <!--</feature>-->
 
-    <!-- for Android -->
-    <feature name="Toast">
-        <param name="android-package" value="nl.xservices.plugins.Toast" />
-    </feature>
+    <!--&lt;!&ndash; for Android &ndash;&gt;-->
+    <!--<feature name="Toast">-->
+        <!--<param name="android-package" value="nl.xservices.plugins.Toast" />-->
+    <!--</feature>-->
 
-    <!-- for WP8 -->
-    <feature name="Toast">
-        <param name="wp-package" value="Toast"/>
-    </feature>
+    <!--&lt;!&ndash; for WP8 &ndash;&gt;-->
+    <!--<feature name="Toast">-->
+        <!--<param name="wp-package" value="Toast"/>-->
+    <!--</feature>-->
     
     <preference name="orientation" value="portrait" />
     <!-- all: default means both landscape and portrait are enabled -->

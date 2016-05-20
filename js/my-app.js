@@ -15,8 +15,8 @@ var Toast;
 
 function onDeviceReady() {
     //alert("Device is ready");
-    email = cordova.plugins.email;
-    Toast = window.plugins.toast;
+    //email = cordova.plugins.email;
+    //Toast = window.plugins.toast;
     myApp.alert("Device is ready");
 }
 //Monitors back button press
@@ -139,16 +139,25 @@ myApp.onPageInit('caseresult', function (page) {
 myApp.onPageInit('testimonial', function (page) {
     var list = user.user.testimonial.list;
     $('#testimonial-text').text(user.user.testimonial.testimonialText);
-    var testimonyList = $('#testimony-list');
+
+    var items = "";
     for(i=0;i<list.length;i++)
     {
-        testimonyList.append('<div class="single-testimonial swiper-slide" >' +
-            '<div class="single-testimonial-image">' +
-            '<img src="img/testimonial1.jpg" alt="testimonial photos"></div>' +
+
+        items+='<div class="single-testimonial swiper-slide swiper-slide-active" style="width: 1336px;">' +
+            '<div class="single-testimonial-image"><img src="img/testimonial'+i+'.jpg" alt="testimonial photos">' +
+            '</div>' +
             '<div class="single-testimonial-text">' +
-            '<h2>' + list[i].name + '<span>' + list[i].company + '</span></h2>' +
-            '<blockquote>' + list[i].text + '</blockquote></div></div>');
+            '<h2>wayne jones<span>abc company</span></h2>' +
+            '<blockquote>Professiona morph excell opport unities before covalent content.Conveniently' +
+            ' build ortho gonal excell opport' +
+            '</blockquote>' +
+            '</div>' +
+            '</div>';
+
     }
+
+    $('#testimony-list').append(items);
 
     /* testimonial slider */
     var mySwiper = myApp.swiper('.testimonial-item', {
