@@ -420,9 +420,9 @@ iframe {
 
 .practice-area {
     display: block;
-    height: 100%;
+    height:auto;
     width:auto;
-    padding: 40px 20px 0px 20px;
+    padding: 40px 20px 30px 20px;
 }
 
 .practice-text, .case-result-text, .testimonial-text, .contact-me-text {
