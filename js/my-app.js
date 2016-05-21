@@ -33,8 +33,8 @@ $$(document).on('ajaxComplete', function (e) {
 });
 
 function onDeviceReady() {
-    //email = cordova.plugins.email;
-    //Toast = window.plugins.toast;
+    email = cordova.plugins.email;
+    Toast = window.plugins.toast;
     myApp.alert("Device is ready");
 }
 //Monitors back button press
