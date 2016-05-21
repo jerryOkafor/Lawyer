@@ -39,13 +39,8 @@ function onDeviceReady() {
 }
 //Monitors back button press
 function onBackButtonPressed() {
-
-    //if (cordova.platformId !== 'windows') {
-    //    return;
-    //}
-
     myApp.alert("BAck Button Pressed");
-    if (currentPage.name != "" )
+    if (currentPage.name != "index" )
     {
 
         myApp.mainView.back();
@@ -152,21 +147,22 @@ myApp.onPageInit('appointment', function (page) {
         dateFormat: 'DD, MM dd, yyyy'
     });
 
-    //set the appoint ment text
+    //set the appointment text
     $("#appointment-text").text(user.user.appointment.appointmentText);
     $$('.primary-btn').on('click', function (e) {
         var formData = myApp.formToJSON('#appointment-form');
         alert(JSON.stringify(formData));
+        email.open({
+            to: user.user.about.email,
+            //cc: ['cc1@email.de', 'cc2@email.de'],
+            //bcc: ['bcc1@email.de', 'bcc2@email.de'],
+            //subject: isHtml ? 'Body with HTML and CSS3' : 'Body with plain text',
+            subject: 'Client Appointment Book',
+            body: JSON.stringify(formData),
+            isHTML: isHtml
+        }, showToast("Invitation Mail sent"));
     });
-    //email.open({
-    //    to: user.user.about.email,
-    //    //cc: ['cc1@email.de', 'cc2@email.de'],
-    //    //bcc: ['bcc1@email.de', 'bcc2@email.de'],
-    //    //subject: isHtml ? 'Body with HTML and CSS3' : 'Body with plain text',
-    //    subject: 'Client Appointment Book',
-    //    body: JSON.stringify(formData),
-    //    isHTML: isHtml
-    //}, showToast);
+
 
 });
 // case-result
@@ -231,8 +227,8 @@ myApp.onPageInit('contact-me', function (page) {
         alert(JSON.stringify(formData));
         Toast.show(JSON.stringify(formData), 'bottom', 'short');
 
-        function showToast() {
-            Toast.show("Main Sent", 'bottom', 'short');
+        function showToast(message) {
+            Toast.show(message, 'bottom', 'short');
         }
 
         email.open({
@@ -244,7 +240,7 @@ myApp.onPageInit('contact-me', function (page) {
             body: JSON.stringify(formData),
             //isHTML: isHtml
             isHTML: false
-        }, showToast)
+        }, showToast("Contact Mail Sent"))
 
     });
 
